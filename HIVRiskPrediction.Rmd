@@ -1,0 +1,105 @@
+---
+title: "Predicting HIV risk from visual cues"
+author: "Ralf Schm?lzle"
+date: "September, 2015"
+output: html_document
+---
+
+## Overview
+The goal is to train a model that is capable of predicting ratings of HIV risk for a given photograph based on visual cues that are depicted on the photograph. We start a test dataset that characterizes 60 photographs on i) ratings of HIV risk provided by actual raters (criterion variable) as well as ii) a large number of visual cues (cue measures obtained from a large group of cue-judges) for each photograph. We then train a simple regression model, i.e. we estimate the coefficients that link the cues to the HIV risk ratings. This model is then applied to a test dataset in order to see if what it has learned (the coefficients) generalizes and yields accurate predictions.  
+  
+### 1. Prepare data
+We first read in the data and print the column/variable names.
+The first part of the variable name (Cue2 ... Cue5) tells us the cue-number. The reason why this is not continuous (1.2.3...)
+is that we applied a column filter (over in KNIME) to reduce highly correlated and thus redundant cues (another option would have been to use factor analysis, but if the goal is to predict from observable cues, that is the more practicable option).
+After the variable name, we see the category to which the cue belongs: appearance, body, face, hair, mouth, set, skin, view...
+Then comes the specific item (also indicating the item directionality)
+Finally, we get the cue abstracness: 0 indicating very concrete and observable, 1 is a slightly more interpretive level. 
+
+After reading in these data we print out the variable names
+
+```{r}
+
+#echo=FALSE, warning=FALSE, results='hide'}
+rm(list = ls())
+setwd("/Users/Ralf/My Cloud/03_PROJEKTE/CUES/Matlab/")
+library(foreign) # gives read.spss function
+dataset1 = read.csv("setA_001-120_corr_filtered.txt", header =TRUE, sep = ","); 
+colnames(dataset1)
+```
+
+### 2. Computing the model for the training data 
+Now we specify and estimate a linear model (multiple regression).
+Printing out the summary then lets us look at the coefficients.
+
+```{r} 
+RegModel.1 <- 
+  lm(Risk~CUE2_Appearance2_Lot.of..vs..no..body.adornment_Abstract_0+CUE4_Appearance4_Worn.out..vs..intact..clothes_Abstract_1+CUE5_Appearance5_Provocative..vs..reserved..clothes_Abstract_1+CUE6_Appearance6_Unconventional..vs..conventional..appearance_Abstract_1+CUE8_Appearance8_Dark..vs..bright..clothes_Abstract_0+CUE10_Body1_Tense..vs..relaxed..posture_Abstract_1+CUE12_Body3_Overweight..vs..underweight._Abstract_0+CUE15_Eyes1_Dark..vs..no.dark..rings.under.eyes_Abstract_0+CUE16_Eyes2_Reddened..vs..non.reddened..eyes_Abstract_0+CUE17_Eyes3_Dark..vs..bright..eyes_Abstract_0+CUE18_Face1_Happy..vs..sad..expression_Abstract_1+CUE19_Face2_Babyish..vs..mature..Face_Abstract_1+CUE20_Face3_Feminine..vs..masculine..face_Abstract_1+CUE25_Face8_Ugly..vs..beautiful..face_Abstract_1+CUE26_Face9_Red..vs..pale..cheeks_Abstract_0+CUE54_Mouth3_Full..vs..narrow..lips_Abstract_0+CUE55_Set1_Pallid..vs..colorful..background_Abstract_0+CUE56_Set2_Unorganized..vs..organized..background_Abstract_1+CUE57_Set3_Alcohol..vs..no.alcohol..visible_Abstract_0+CUE58_Set4_Picture.taken.inside..vs..outside._Abstract_0+CUE60_Set6_Cigarettes..vs..no.cigarettes..visible_Abstract_0+CUE65_Skin2_Pale..vs..tanned..skin_Abstract_0+CUE68_Skin5_Spotty..vs..spot.free..skin_Abstract_0+CUE69_Skin6_Greasy..vs..dry..skin_Abstract_0+CUE72_View2_Averted..vs..front.facing..gaze_Abstract_0,
+   data=dataset1)
+
+#summary(RegModel.1)
+coef(RegModel.1)
+```
+
+
+### 3. Applying the trained model to predict new data
+We read in the test data and apply the trained model to these data: Thus, we multiply the cue-values for the test data with the beta-coefficients from the training data to yield a set of predicted HIV risk values.
+
+```{r} 
+dataset2 = read.csv("setB_121-240_corr_filtered.txt", header =TRUE, sep = ","); 
+
+pred_values <- predict.lm(RegModel.1, dataset2);
+
+```
+
+### 4. Assessing the accuracy of the prediction
+How well do the predicted data (predicted HIV risk) correlate with the measured data (veridical HIV risk)? In other words, how good does our prediction fit with what we actually observe?
+```{r} 
+cor(dataset2$Risk, pred_values);
+```
+
+
+### 5. Visualize the prediction
+We visualize the data as a scatterplot.
+```{r} 
+
+library("ggplot2")
+qplot(dataset2$Risk, pred_values, xlab = "Actual HIV Risk", ylab = "Predicted HIV Risk", 
+    xlim = c(1,7), ylim = c(1,7), asp = 1) +
+    theme(text = element_text(size=20))
+```
+
+### Summary
+Applying the trained model to a test dataset ("cross-validation") provides HIV risk predictions that are strikingly similar to the actual ratings given by independent observers. Thus, knowing which cues a particular photograph contains allows us to predict the extent to which the depicted person will be considered "risky" in terms of HIV with high accuracy.
+
+```{r} 
+
+fit.lm = lm(Risk~.,data=dataset1)
+summary(fit.lm)$coefficients
+
+
+library(lars)
+
+x <- as.matrix(dataset1[,2:26])
+y <- as.matrix(dataset1[,1])
+
+# fit model
+fit <- lars(x, y, type="lasso")
+# summarize the fit
+summary(fit)
+# select a step with a minimum error
+best_step <- fit$df[which.min(fit$RSS)]
+# make predictions
+predictions <- predict(fit, x, s=best_step, type="fit")$fit
+# summarize accuracy
+rmse <- mean((y - predictions)^2)
+print(rmse)
+
+lasso_coefs = data.frame(coef(fit, s=best_step))
+class_coefs = data.frame(coef(RegModel.1))
+
+de <- merge(lasso_coefs, class_coefs, by=0, all=TRUE)
+
+```
+
+
