@@ -1,4 +1,4 @@
-# Analysis for Schmälzle, Imhof, Grall, Flaisch, & Schupp (submitted)
+# Analysis for Schmälzle, Hartung, Imhof, Renner, & Schupp (submitted)
 
 Data and analysis code for *Schmälzle, R., Hartung, F-M., Imhof, M., Renner, B. & Schupp, H.T. (submitted). Risky looks? 
 Which visual cues predict intuitive HIV risk perception.* [![DOI](http://www.ralfschmaelzle.net/wp-content/plugins/papercite/img/pdf.png)](https://doi.org/10.) [External Link]|[Link to WorkingGdoc](https://docs.google.com/document/d/1MHabaA8bNOCd3f9p-UR_EVEuhTV2rKqQMOGhDGUQc2A/edit?usp=sharing)
