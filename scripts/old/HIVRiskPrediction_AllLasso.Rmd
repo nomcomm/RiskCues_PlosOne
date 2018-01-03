@@ -17,7 +17,7 @@ Finally, we get the cue abstracness: 0 indicating very concrete and observable, 
 
 ```{r echo=FALSE, warning=FALSE}
 rm(list = ls())
-setwd("/Users/Ralf/My Cloud/03_PROJEKTE/CUES/Matlab/")
+setwd("/Users/Ralf/My_Cloud/RalfsFunctions/GITHUB/nomcomm/riskcues/data")
 library(foreign) # gives read.spss function
 library("ggplot2")
 train_data = read.csv("setA_001-120.txt", header =TRUE, sep = "\t"); 
@@ -151,7 +151,8 @@ qplot(test_data$Risk, pred_values, xlab = "Actual HIV Risk", ylab = "Predicted H
 #pred_values <- predict.lm(RegModel.full, X_test);
 #cor.test(test_data$Risk, pred_values);
 
-rm(test_data, X_test, pred_values, coefficients.reduced, coefficients.full, corrs, RegModel.full, RegModel.reduced)
+rm(test_data, X_test, pred_values, coefficients.reduced, coefficients.full, corrs,  RegModel.reduced)
+#RegModel.full,
 ```
 
 #### 3.1 Linear Regression, reduced set of cues
@@ -254,7 +255,8 @@ qplot(test_data$Risk, pred_values, xlab = "Actual HIV Risk", ylab = "Predicted H
 #pred_values <- predict.lm(RegModel.full, X_test);
 #cor.test(test_data$Risk, pred_values);
 
-rm(test_data, X_test, pred_values, coefficients.reduced, coefficients.full, corrs, RegModel.full, RegModel.reduced)
+rm(test_data, X_test, pred_values, coefficients.reduced, coefficients.full, RegModel.full, RegModel.reduced)
+# corrs
 ```
 
 
