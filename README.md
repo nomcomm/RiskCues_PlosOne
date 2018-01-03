@@ -14,7 +14,7 @@ Click on the following link to run the notebooks in your browser. (ToDo)
 ### Code
 * The [notebook (using R) to reproduce all main results](https://github.com/nomcomm/riskcues/blob/master/scripts/HIV%20Risk%20Prediction%20R%20.ipynb)
 * The [notebook to reproduce the tpot-auto-ML analysis](https://github.com/nomcomm/riskcues/blob/master/scripts/TPOT-CuePrediction.ipynb)
-* A [Matlab script for getting the data in shape)(https://github.com/nomcomm/riskcues/blob/master/scripts/MatlabAnalyseCues_1.m)
+* A [Matlab script for getting the data in shape](https://github.com/nomcomm/riskcues/blob/master/scripts/MatlabAnalyseCues_1.m)
 
 
 ### Data
