@@ -5,7 +5,7 @@ Visual cues that predict intuitive HIV risk perception.* [![DOI](http://www.ralf
 
 ***
 
-<img align="right" width=250px src=data/explainer_fig.png> 
+<img align="right" width=300px src=data/explainer_fig.png> 
 
 
 ### Code
