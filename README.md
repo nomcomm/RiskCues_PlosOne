@@ -7,11 +7,11 @@ Visual cues that predict intuitive HIV risk perception.* [![DOI](http://www.ralf
 
 <img align="right" width=300px src=data/explainer_fig.png> 
 
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/nomcomm/riskcues/master)
-
 
 ### Code
-* The [notebook (using R) to reproduce all main results](https://github.com/nomcomm/riskcues/blob/master/scripts/HIV%20Risk%20Prediction%20R%20.ipynb)
+* The [notebook to reproduce all main results](https://github.com/nomcomm/riskcues/blob/master/scripts/SciKitLearn_FullData.ipynb)
+* Reproduce results in a binderized virtual environment:
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/nomcomm/riskcues/master)
 * A [Matlab script for getting the data in shape](https://github.com/nomcomm/riskcues/blob/master/scripts/MatlabAnalyseCues_1.m)
 
 
@@ -20,7 +20,7 @@ Visual cues that predict intuitive HIV risk perception.* [![DOI](http://www.ralf
 
 
 ### Dependencies
-* Python, R
+* Python
 
 [R](http://r-project.org/) and 
 [Anaconda](http://continuum.io/downloads) should provide you with most of what you need.
@@ -28,8 +28,10 @@ Visual cues that predict intuitive HIV risk perception.* [![DOI](http://www.ralf
 
 The following packages are used and we feel very indebted to their creators:
 * [Project Jupyter](https://github.com/jupyter) 
-* [scikit-learn](http://scikit-learnorg/)
-* [lars](https://cran.r-project.org/web/packages/lars/index.html)
+* [scikit-learn](http://scikit-learn.org/)
+* [Pandas](http://pandas.pydata.org/)
+* [matplotlib](https://matplotlib.org/)
+* [Seaborn](http://seaborn.pydata.org/)
 
 
 
