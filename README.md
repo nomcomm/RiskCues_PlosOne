@@ -7,6 +7,8 @@ Visual cues that predict intuitive HIV risk perception.* [![DOI](http://www.ralf
 
 <img align="right" width=300px src=data/explainer_fig.png> 
 
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/nomcomm/riskcues/master)
+
 
 ### Code
 * The [notebook (using R) to reproduce all main results](https://github.com/nomcomm/riskcues/blob/master/scripts/HIV%20Risk%20Prediction%20R%20.ipynb)
