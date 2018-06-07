@@ -12,7 +12,6 @@ Visual cues that predict intuitive HIV risk perception.* [![DOI](http://www.ralf
 
 ### Code
 * The [notebook (using R) to reproduce all main results](https://github.com/nomcomm/riskcues/blob/master/scripts/HIV%20Risk%20Prediction%20R%20.ipynb)
-* The [notebook to reproduce the tpot-auto-ML analysis](https://github.com/nomcomm/riskcues/blob/master/scripts/TPOT-CuePrediction.ipynb)
 * A [Matlab script for getting the data in shape](https://github.com/nomcomm/riskcues/blob/master/scripts/MatlabAnalyseCues_1.m)
 
 
@@ -29,7 +28,6 @@ Visual cues that predict intuitive HIV risk perception.* [![DOI](http://www.ralf
 
 The following packages are used and we feel very indebted to their creators:
 * [Project Jupyter](https://github.com/jupyter) 
-* [TPot](https://rhiever.github.io/tpot/)
 * [scikit-learn](http://scikit-learnorg/)
 * [lars](https://cran.r-project.org/web/packages/lars/index.html)
 
