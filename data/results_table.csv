@@ -1,0 +1,57 @@
+,risk_cue_correlations,Cue Means,Cue Stds,Lasso Coefficients
+ CUE1_Appearance1_Ungroomed (vs. groomed) appearance_Abstract_2,0.18,3.22,1.04,0.02
+ CUE2_Appearance2_Lot of (vs. no) body adornment_Abstract_0,0.43,2.96,1.11,0.14
+ CUE4_Appearance4_Worn out (vs. intact) clothes_Abstract_1,0.07,2.45,0.81,0.0
+ CUE5_Appearance5_Provocative (vs. reserved) clothes_Abstract_1,0.23,4.09,1.23,0.06
+ CUE6_Appearance6_Unconventional (vs. conventional) appearance_Abstract_1,0.54,3.49,0.74,0.31
+ CUE7_Appearance7_Fashionable (vs. unfashionable) appearance_Abstract_1,0.2,4.25,1.08,0.06
+ CUE8_Appearance8_Dark (vs. bright) clothes_Abstract_0,0.06,4.08,1.6,0.03
+ CUE9_Appearance9_Clean (vs. dirty) clothes_Abstract_1,-0.03,4.38,1.02,-0.0
+ CUE10_Body1_Tense (vs. relaxed) posture_Abstract_1,0.16,3.76,0.91,0.0
+ CUE11_Body2_Musculous (vs. not musculous) stature_Abstract_1,-0.09,4.18,0.89,-0.04
+ CUE12_Body3_Overweight (vs. underweight)_Abstract_0,-0.28,3.7,0.93,-0.11
+ CUE13_Body4_Well (vs. badly) proportioned Stature_Abstract_1,0.23,4.69,1.09,0.07
+ CUE14_Body5_Tall (vs.low) height_Abstract_0,-0.13,4.33,0.81,-0.09
+ CUE15_Eyes1_Dark (vs. no dark) rings under eyes_Abstract_0,0.21,3.27,0.87,0.04
+ CUE16_Eyes2_Reddened (vs. non-reddened) eyes_Abstract_0,0.33,2.85,0.78,0.12
+ CUE17_Eyes3_Dark (vs. bright) eyes_Abstract_0,0.23,4.3,1.28,0.0
+ CUE18_Face1_Happy (vs. sad) expression_Abstract_1,-0.33,4.43,1.5,-0.0
+ CUE19_Face2_Babyish (vs. mature) Face_Abstract_1,-0.09,4.01,0.97,-0.0
+ CUE20_Face3_Feminine (vs. masculine) face_Abstract_1,-0.06,4.16,1.09,-0.03
+ CUE21_Face4_Exhausted (vs. powerful) expression_Abstract_1,0.24,3.7,0.95,0.0
+ CUE22_Face5_Round (vs. narrow) face_Abstract_0,-0.25,3.6,1.09,-0.01
+ CUE23_Face6_Worn (vs. fresh) face_Abstract_1,0.33,3.53,0.96,0.2
+ CUE24_Face7_Worried (vs. unworried) expression_Abstract_1,0.31,3.26,1.19,0.06
+ CUE25_Face8_Ugly (vs. beautiful) face_Abstract_1,0.01,3.93,1.05,0.02
+ CUE26_Face9_Red (vs. pale) cheeks_Abstract_0,-0.13,4.03,1.06,0.0
+ CUE27_Face10_Narrow (vs. full) jaws_Abstract_0,0.26,3.81,1.19,0.02
+ CUE28_Face11_Serious (vs. blithely) expression_Abstract_1,0.35,3.72,1.37,0.0
+ CUE29_Face12_Average (vs. unusual) face_Abstract_1,-0.42,4.33,0.77,-0.08
+ CUE30_Face13_Angry (vs. cheerful) expression_Abstract_1,0.22,3.4,1.08,0.0
+ CUE31_Face14_Reddened (vs. non-reddened) face_Abstract_0,-0.09,3.93,1.38,0.01
+ CUE32_Face15_Friendly (vs. grumpy) expression_Abstract_1,-0.35,4.34,1.39,-0.03
+ CUE33_Face16_Symmetric (vs. unsymmetric) face_Abstract_0,-0.01,4.37,0.77,-0.0
+ CUE48_Hair1_Ungroomed (vs. groomed) hair_Abstract_1,0.19,3.34,0.87,0.04
+ CUE49_Hair2_Long (vs. short) hair_Abstract_0,0.19,3.31,1.33,-0.0
+ CUE50_Hair3_Fashionable (vs. unfashionable) hairstyle_Abstract_1,0.06,3.64,1.03,0.0
+ CUE51_Hair4_Dark (vs. bright) hair_Abstract_0,0.22,4.63,1.59,0.03
+ CUE52_Mouth1_Smile (vs. non smile)_Abstract_0,-0.33,3.62,1.56,-0.0
+ CUE54_Mouth3_Full (vs. narrow) lips_Abstract_0,0.29,3.8,0.93,0.07
+ CUE55_Set1_Pallid (vs. colorful) background_Abstract_0,0.15,3.96,1.41,0.04
+ CUE56_Set2_Unorganized (vs. organized) background_Abstract_1,0.07,3.74,1.14,0.05
+ CUE57_Set3_Alcohol (vs. no alcohol) visible_Abstract_0,0.09,0.12,0.29,0.0
+ CUE58_Set4_Picture taken inside (vs. outside)_Abstract_0,0.08,7.47,0.46,0.0
+ CUE59_Set5_Picture taken in nature (vs. civilization)_Abstract_0,-0.18,0.25,0.37,-0.0
+ CUE60_Set6_Cigarettes (vs. no cigarettes) visible_Abstract_0,0.17,7.05,0.15,0.0
+ CUE61_Set7_Food (vs. no food) visible_Abstract_0,-0.08,7.14,0.27,-0.0
+ CUE63_Set9_During sports activities (vs. not)_Abstract_0,-0.06,5.91,2.4,-0.02
+ CUE64_Skin1_Unhealthy (vs. healthy) skin_Abstract_1,0.14,3.41,0.9,0.0
+ CUE65_Skin2_Pale (vs. tanned) skin_Abstract_0,-0.06,4.24,0.94,-0.0
+ CUE66_Skin3_Pimply (vs. pimple-free) skin_Abstract_0,0.1,3.02,0.84,0.0
+ CUE67_Skin4_Many (vs. few) skin folds_Abstract_0,-0.05,2.49,0.68,-0.0
+ CUE68_Skin5_Spotty (vs. spot-free) skin_Abstract_0,0.1,2.74,0.89,0.0
+ CUE69_Skin6_Greasy (vs. dry) skin_Abstract_0,-0.01,4.31,0.71,0.02
+ CUE70_Skin7_Lots of (vs. no) skin visible_Abstract_0,-0.1,4.65,1.36,0.0
+ CUE71_View1_Coquettish (vs. no coquettish) gaze_Abstract_1,0.13,3.49,1.22,0.12
+ CUE72_View2_Averted (vs. front-facing) gaze_Abstract_0,0.14,3.42,2.06,0.01
+ CUE73_View3_Tired (vs. alert) gaze_Abstract_1,0.28,3.45,1.03,0.0
