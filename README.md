@@ -1,7 +1,7 @@
 # Analysis for Schmälzle, Hartung, Imhof, Barth, Kenter, Renner, & Schupp (2019)
 
 Data and analysis code for *Schmälzle, R., Hartung, F-M., Imhof, M., Barth, A., Kenter, A., Renner, B. & Schupp, H.T. (2019). 
-Visual cues that predict intuitive risk perception in the case of HIV. PlosOne* [![DOI](http://www.ralfschmaelzle.net/wp-content/plugins/papercite/img/pdf.png)](https://doi.org/10.) [External Link]
+Visual cues that predict intuitive risk perception in the case of HIV. PlosOne* [![DOI](http://www.ralfschmaelzle.net/wp-content/plugins/papercite/img/pdf.png)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0211770) [External Link]
 
 ***
 
